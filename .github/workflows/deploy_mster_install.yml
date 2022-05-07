@@ -34,12 +34,25 @@ jobs:
       - name: Run a one-line script
         run: sudo apt update
 
-      # Runs apt update
+      # Runs apt upgrade
       - name: Run a one-line script
         run: sudo apt upgrade
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: edit file --- /etc/modules-load.d/k8s.conf
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+          br_netfilter
+          EOF
+      - name: edit file --- /etc/sysctl.d/k8s.conf
+        run: |
+          cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+          net.bridge.bridge-nf-call-ip6tables = 1
+          net.bridge.bridge-nf-call-iptables = 1
+          EOF
+      - name: cmd --- sudo sysctl --system
+        run: |
+          sudo sysctl --system
+
+
+
