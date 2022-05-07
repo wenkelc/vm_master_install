@@ -54,5 +54,11 @@ jobs:
         run: |
           sudo sysctl --system
 
+      - name: cmd --- libseccomp2
+        run: |
+          echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list
+          apt update
+          apt install -y -t buster-backports libseccomp2 || apt update -y -t buster-backports libseccomp2
+
 
 
