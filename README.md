@@ -1,9 +1,8 @@
-# vm_master_install
+# Container in VM buildah'en
 
 
 container=$(buildah from alpine)
-container=$(buildah from 52157f7aa28b)
-
+container=$(buildah from image-nr)
 
 buildah run $container bash
 
