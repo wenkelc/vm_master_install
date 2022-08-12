@@ -34,5 +34,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          ls -ls >> out.txt
+          ls -ls >> out1.txt
           echo test, and deploy your project.
