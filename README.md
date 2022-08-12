@@ -9,3 +9,6 @@ buildah run $container bash
 
 buildah rm 
 buildah rmi
+
+
+Test
