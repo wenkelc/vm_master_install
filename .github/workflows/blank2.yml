@@ -35,4 +35,5 @@ jobs:
         run: |
           echo Add other actions to build,
           ls -ls >> out1.txt
+          sudo apt update >> out2.txt
           echo test, and deploy your project.
