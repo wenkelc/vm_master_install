@@ -39,6 +39,6 @@ jobs:
           echo ---- --- ---- >> out2.txt
           sudo apt upgrade >> out2.txt
           echo ---- --- ---- >> out2.txt
-          buildah bud -f Dockerfile
+          buildah bud -f Dockerfile -t cw_container
           echo ---- End ---- >> out2.txt
           
