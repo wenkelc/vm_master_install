@@ -38,4 +38,7 @@ jobs:
           sudo apt update >> out2.txt
           echo ---- --- ---- >> out2.txt
           sudo apt upgrade >> out2.txt
+          echo ---- --- ---- >> out2.txt
+          buildah bud -f Dockerfile
           echo ---- End ---- >> out2.txt
+          
