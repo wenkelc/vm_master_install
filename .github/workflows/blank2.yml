@@ -34,8 +34,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo --- Start ---
-          ls -ls >> out1.txt
+          ls -ls >> out1.txt >> out2.txt
           sudo apt update >> out2.txt
-          echo ---- --- ----
+          echo ---- --- ---- >> out2.txt
           sudo apt upgrade >> out2.txt
-          echo ---- End ----
+          echo ---- End ---- >> out2.txt
