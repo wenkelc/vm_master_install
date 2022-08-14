@@ -11,3 +11,13 @@ buildah rmi
 
 
 Test
+
+
+
+git clone https://github.com/wenkelc/vm_master_install.git
+
+
+git commit -a
+
+
+git push
