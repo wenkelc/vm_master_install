@@ -2,7 +2,7 @@ FROM alpine:latest
 
 #COPY -----
 
-RUN apk add --no-cache bash nginx curl openrc
+RUN apk add --no-cache bash nginx curl openrc make g++
 #python3 g++ make
 
 
