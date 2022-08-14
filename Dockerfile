@@ -2,8 +2,8 @@ FROM alpine:latest
 
 #COPY -----
 
-RUN apk add --no-cache bash nginx rc-service
-#python3 g++ make curl
+RUN apk add --no-cache bash nginx curl
+#python3 g++ make
 
 
 EXPOSE 80
