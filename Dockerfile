@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-COPY 
+#COPY 
 
 RUN apk add --no-cache bash nginx curl rc-service
 #python3 g++ make
